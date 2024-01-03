@@ -52,6 +52,74 @@ public class TicTacToe {
             System.out.println("Enter the column (1,2,or 3)");
             int column = (jake.nextInt() - 1);
             board[column][row] = human;
+            boolean why = false;
+            if (board[0][0].equals(human) && board[0][1].equals(human) && board[0][2].equals(human)) {
+                System.out.println("You win!");
+                human_win = true;
+            }
+            else if (board[1][0].equals(human) && board[1][1].equals(human) && board[1][2].equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[2][0].equals(human) && board[2][1].equals(human) && board[2][2].equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][0].equals(human) && board[1][0].equals(human) && board[2][0].equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][1] .equals(human) && board[1][1] .equals(human) && board[2][1] .equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][2] .equals(human) && board[1][2] .equals(human) && board[2][2] .equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][0] .equals(human) && board[1][1] .equals(human) && board[2][2] .equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][2] .equals(human) && board[1][1] .equals(human) && board[2][0] .equals(human)) {
+                System.out.println("You win");
+                human_win = true;
+            }
+            else if (board[0][0] .equals(bot) && board[0][1] .equals(bot) && board[0][2] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[1][0] .equals(bot) && board[1][1] .equals(bot) && board[1][2] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[2][0] .equals(bot) && board[2][1] .equals(bot) && board[2][2] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[0][0] .equals(bot) && board[1][0] .equals(bot) && board[2][0] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[0][1] .equals(bot) && board[1][1] .equals(bot) && board[2][1] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[0][2] .equals(bot) && board[1][2] .equals(bot) && board[2][2] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[0][0] .equals(bot) && board[1][1] .equals(bot) && board[2][2] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (board[0][2] .equals(bot) && board[1][1] .equals(bot) && board[2][0] .equals(bot)) {
+                System.out.println("The bot wins!");
+                bot_win = true;
+            }
+            else if (!board[0][0].equals("-") && !board[0][1].equals("-") && !board[0][2].equals("-") && !board[1][0].equals("-") && !board[1][1].equals("-") && !board[1][2].equals("-") && !board[2][0].equals("-") && !board[2][1].equals("-") && !board[2][2].equals("-")) {
+                System.out.println("It's a tie!");
+            }
             int bot_row = (int) (Math.random() * 3);
             int bot_column = (int) (Math.random() * 3);
             if (human.equals("X")) {
@@ -61,79 +129,15 @@ public class TicTacToe {
                     bot = "X";
                 }
             }
-            bot = board[bot_column][bot_row];
-            while (!bot.equals("-")||(bot_column==column && bot_row==row)) {
-                bot_row = (int) (Math.random() * 3);
-                bot_column = (int) (Math.random() * 3);
-                bot = board[bot_column][bot_row];
-            }
-            if (board[0][0] == human && board[0][1] == human && board[0][2] == human) {
-                System.out.println("You win!");
-                human_win = true;
-            }
-            if (board[1][0] == human && board[1][1] == human && board[1][2] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[2][0] == human && board[2][1] == human && board[2][2] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][0] == human && board[1][0] == human && board[2][0] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][1] == human && board[1][1] == human && board[2][1] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][2] == human && board[1][2] == human && board[2][2] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][0] == human && board[1][1] == human && board[2][2] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][2] == human && board[1][1] == human && board[2][0] == human) {
-                System.out.println("You win");
-                human_win = true;
-            }
-            if (board[0][0] == bot && board[0][1] == bot && board[0][2] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[1][0] == bot && board[1][1] == bot && board[1][2] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[2][0] == bot && board[2][1] == bot && board[2][2] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[0][0] == bot && board[1][0] == bot && board[2][0] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[0][1] == bot && board[1][1] == bot && board[2][1] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[0][2] == bot && board[1][2] == bot && board[2][2] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[0][0] == bot && board[1][1] == bot && board[2][2] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            }
-            if (board[0][2] == bot && board[1][1] == bot && board[2][0] == bot) {
-                System.out.println("The bot wins!");
-                bot_win = true;
-            } else {
-                System.out.println("Wow! its a tie!");
-                break;
+            while (!why) {
+                if (board[bot_row][bot_column].equals("-")) {
+                    board[bot_row][bot_column] = bot;
+                    why = true;
+                } else if (board[bot_row][bot_column].equals("X")||board[bot_row][bot_column].equals("O")) {
+                    bot_row = (int)(Math.random()*3);
+                    bot_column = (int)(Math.random()*3);
+                }
             }
         }
+        }
     }
-}
