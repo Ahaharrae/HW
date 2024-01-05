@@ -7,7 +7,8 @@ public class TicTacToe {
         board = new String[3][3];
         System.out.println("Choose X or O");
         String human = jake.nextLine();
-
+        System.out.println("Enter your name");
+        String name = jake.nextLine();
         String bot = "hi";
         if (human.equals("X")) {
             bot = "O";
@@ -16,6 +17,7 @@ public class TicTacToe {
         }
         boolean human_win = false;
         boolean bot_win = false;
+        boolean j_loss = false;
         board[0][0] = "-";
         board[0][1] = "-";
         board[0][2] = "-";
@@ -52,6 +54,9 @@ public class TicTacToe {
                     }
                 }
             }
+            if (j_loss == true) {
+                break;
+            }
             //game that totally works
             int bot_row = (int) (Math.random() * 3);
             int bot_column = (int) (Math.random() * 3);
@@ -76,29 +81,151 @@ public class TicTacToe {
                     }
                 }
             } if (board[0][0].equals(human) && board[0][1].equals(human) && board[0][2].equals(human)) {
-                System.out.println("You win!");
-                human_win = true;
+
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
+
             } else if (board[1][0].equals(human) && board[1][1].equals(human) && board[1][2].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[2][0].equals(human) && board[2][1].equals(human) && board[2][2].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][0].equals(human) && board[1][0].equals(human) && board[2][0].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][1].equals(human) && board[1][1].equals(human) && board[2][1].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][2].equals(human) && board[1][2].equals(human) && board[2][2].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][0].equals(human) && board[1][1].equals(human) && board[2][2].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][2].equals(human) && board[1][1].equals(human) && board[2][0].equals(human)) {
-                System.out.println("You win");
-                human_win = true;
+                if (name.equals("Jocelyn")||name.equals("jocelyn")) {
+                    for (int x = 0; x < 3; x++) {
+                        for (int y = 0; y < 3; y++) {
+                            if (board[x][y].equals("X")) {
+                                board[x][y] = "O";
+                            } else if (board[x][y].equals("O")) {
+                                board[x][y] = "X";
+                            }
+                        }
+                    }
+                    System.out.println("You lose lol take that. Eric made me do this");
+                    human_win = false;
+                    j_loss = true;
+                } else {
+                    System.out.println("You win!");
+                    human_win = true;
+                }
             } else if (board[0][0].equals(bot) && board[0][1].equals(bot) && board[0][2].equals(bot)) {
                 System.out.println("The bot wins!");
                 bot_win = true;
